@@ -1,32 +1,10 @@
-/* _______________________________POLICES_______________________________*/
-/* cyrillic */
-@font-face {
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/jost/v6/92zPtBhPNqw79Ij1E865zBUv7mxEIjVFNI4un_HKOEp-Cw.woff) format('woff');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/jost/v6/92zPtBhPNqw79Ij1E865zBUv7mxEIjVPNI4un_HKOEp-Cw.woff) format('woff');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/jost/v6/92zPtBhPNqw79Ij1E865zBUv7mxEIjVBNI4un_HKOEo.woff) format('woff');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
+@import './scss/components/header';
+@import './scss/components/introduction';
+@import './scss/components/links';
+@import './scss/components/figures';
+@import './scss/components/projet';
+@import './scss/components/footer';
+@import './scss/helpers/colors';
 
 /* _______________________________DEFINITIONS GENERAL PARAMETERS_______________________________*/
 body{
@@ -47,9 +25,11 @@ ul{
 h1, h2, figcaption {
   font-size: 32px;
   line-height: 36px;
+  font-weight: 500;
 }
 p,button{
   font-size: 15px;
+  font-weight: 400;
 }
 section{
   padding: 5vh;
@@ -57,15 +37,16 @@ section{
 .primary-btn{
   margin:3vh 0;
   text-transform: uppercase;
-  background-color: white;
+  background-color: $white;
   border-radius: 8px;
   padding: 2vh;
   border: none;
   z-index: 99;
+  transition: 0.3s;
 }
 .primary-btn:hover{
-  background-color:#FFAD9B;
-  color: white;
+  background-color: $orange-hover;
+  color: $white;
   cursor: pointer;
 }
 
@@ -77,202 +58,10 @@ section{
     margin-left:2vh;
     font-size: 24px;
     letter-spacing: 8px;
+    font-weight: 500;
   }
   .white-logo{
-    color: white;
-  }
-}
-
-/* _______________________________HEADER_______________________________*/
-.header-menu{
-  background-color:white;
-  min-height: 10%;
-  display: flex;
-  padding: 3vh;
-  justify-content: space-between;
-  ul{
-    display: none;
-  }
-} 
-
-/* _______________________________INTRODUCTION______________________________*/
-.intoduction-card{
-  background-color:#E7816B;
-  min-height: 90vh;
-  overflow: hidden;
-  padding-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  p, h1{
-    color:white;
-    text-align: center;
-    margin:3vh 0;
-  }
-  img{
-    padding-top: 3vh;
-    margin-top: 0;
-    margin-bottom: -25vh;
-    filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
-  }
-}
-
-/* _______________________________LIENS______________________________*/
-.link-section{
-  display: flex;
-  align-items: center;
-  margin-top: 5vh;
-  width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  
-  div{
-    width: 100%;
-  }
-
-  a{
-    text-decoration: none;
-    color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 5vh;
-    border-radius: 15px;
-    text-transform: uppercase;
-  }
-  a:hover{
-    cursor: pointer;
-  }
-  h2{
-    font-size: 28px;
-    letter-spacing: 1.4px;
-  }
-  p{
-    letter-spacing: 5px;
-  }
-  .link-section__web-design-link{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%), url(./resources/images/image1.png) ;
-  }
-  .link-section__web-design-link:hover{
-    background-image: linear-gradient(0deg, rgba(231,129,107,0.63) 0%, rgba(231,129,107,0.63) 100%), url(./resources/images/image1.png);
-  }
-  .link-section__app-design-link{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%), url(./resources/images/image2.png);
-  }
-  .link-section__app-design-link:hover{
-    background-image: linear-gradient(0deg, rgba(231,129,107,0.63) 0%, rgba(231,129,107,0.63) 100%), url(./resources/images/image2.png);
-  }
-  .link-section__graphic-design-link{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%), url(./resources/images/image3.png);
-  }
-  .link-section__graphic-design-link:hover{
-    background-image: linear-gradient(0deg, rgba(231,129,107,0.63) 0%, rgba(231,129,107,0.63) 100%), url(./resources/images/image3.png);
-  }
-}
-
-/* _______________________________FIGURES______________________________*/
-.section-figure{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 350px;
-    margin: 5vh 0;
-    figure{
-      margin-bottom: 3vh;
-    }
-      figcaption{
-        text-transform: uppercase;
-        margin: 3vh;
-        font-size: 20px;
-      }
-    p{
-      font-size: 16px;
-    }
-  }
-}
-
-/* _______________________________PROJECT______________________________*/
-.section-your-project{
-  background-color: #E7816B;
-  color: white;
-  margin:5vh;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2vh;
-  margin-bottom: 0px;
-  p,h2{
-    margin: 3vh 0;
-  }
-}
-
-/* _______________________________FOOTER______________________________*/
-footer{
-  background-color: #1D1C1E;
-  color: #818081;
-  padding: 5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  .group-link-menu-laptop{
-    display: none;
-  }
-  .contact-ressources{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  hr{
-    width: 100%;
-    height: 1px;
-    background-color: #818081;
-    border: 0;
-  }
-  a{
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-  }
-  a:hover{
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  .list-column{
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    li:hover{
-      cursor: pointer;
-    }
-  }
-  ul{
-    margin: 3vh 0;
+    color: $white;
   }
 }
 
@@ -297,104 +86,5 @@ footer{
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 2px;
-  }
-
-  /* __________header__________*/
-  .header-menu{
-    padding: 5vh 20vh;
-    nav {
-      width: 30%;
-      img{
-        display: none;
-      }
-      ul{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        text-transform: uppercase;
-        li:hover{
-          text-decoration: underline;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-  /* __________introduction__________*/
-  .intoduction-card{
-    border-radius: 16px;
-    display: flex;
-    flex-direction: row;
-    min-height: 70vh;
-    padding: 5vh 10vh;
-    img{
-      width: 40%;
-    }
-    div{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 0 5vh;
-      h1,p{
-        text-align: left;
-      }
-    }
-  }
-
-  /* __________liens__________*/
-  .link-section{
-    .link-section__web-design-link{
-      width: 45%;
-      height: 645px;
-      margin-right: 5%;
-    }
-    div {
-      width: 50%;
-    }
-  }
-
-  /* __________projet__________*/
-  .section-your-project{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    padding: 10vh;
-    div{
-      width:50%;
-    }
-  }
-
-  /* __________footer__________*/
-  footer{
-    padding: 10vh 20vh;
-    .footer-menu-and-logo{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-    .group-logo{
-      justify-self: flex-start;
-    }
-    .group-link-menu-phone{
-      display: none;
-    }
-    .group-link-menu-laptop{
-      display: flex;
-      justify-content: space-between;
-      width: 40%;
-    }
-    .contact-ressources{
-      flex-wrap: wrap;
-      justify-content: space-between;
-      flex-direction: row;
-      .list-column{
-        width: 20%;
-      }
-    }
   }
 }

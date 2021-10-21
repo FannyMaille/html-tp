@@ -1,0 +1,43 @@
+/* _______________________________PROJECT______________________________*/
+.section-your-project{
+  background-color: $orange;
+  color: $white;
+  margin:5vh;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2vh;
+  margin-bottom: 0px;
+  position: absolute;
+  top:-30vh;
+  left: auto;
+  right: auto;
+  margin-left: 0;
+  margin-right: 0;
+  width: 78%;
+  p,h2{
+    margin: 3vh 0;
+  }
+}
+
+/* ______________________________________RESPONSIVE______________________________________*/
+@media screen and (min-width:800px){
+
+  /* __________projet__________*/
+  .section-your-project{
+    top:-30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 10vh;
+    div{
+      width:50%;
+    }
+  }
+}

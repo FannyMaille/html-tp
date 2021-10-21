@@ -1,0 +1,29 @@
+@import "../helpers/colors";
+/* _______________________________FIGURES______________________________*/
+.section-figure{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+    margin: 5vh 0;
+    figure{
+      margin-bottom: 3vh;
+    }
+      figcaption{
+        text-transform: uppercase;
+        margin: 3vh;
+        font-size: 20px;
+      }
+    p{
+      font-size: 16px;
+    }
+  }
+}

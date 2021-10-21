@@ -1,96 +1,6 @@
-/* _______________________________POLICES_______________________________*/
-/* cyrillic */
-@font-face {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/jost/v6/92zPtBhPNqw79Ij1E865zBUv7mxEIjVFNI4un_HKOEp-Cw.woff) format("woff");
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/jost/v6/92zPtBhPNqw79Ij1E865zBUv7mxEIjVPNI4un_HKOEp-Cw.woff) format("woff");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/jost/v6/92zPtBhPNqw79Ij1E865zBUv7mxEIjVBNI4un_HKOEo.woff) format("woff");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* _______________________________DEFINITIONS GENERAL PARAMETERS_______________________________*/
-body {
-  font-family: "Jost";
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, figcaption {
-  font-size: 32px;
-  line-height: 36px;
-}
-
-p, button {
-  font-size: 15px;
-}
-
-section {
-  padding: 5vh;
-}
-
-.primary-btn {
-  margin: 3vh 0;
-  text-transform: uppercase;
-  background-color: white;
-  border-radius: 8px;
-  padding: 2vh;
-  border: none;
-  z-index: 99;
-}
-
-.primary-btn:hover {
-  background-color: #FFAD9B;
-  color: white;
-  cursor: pointer;
-}
-
-.group-logo {
-  display: flex;
-  align-items: center;
-}
-.group-logo p {
-  text-transform: uppercase;
-  margin-left: 2vh;
-  font-size: 24px;
-  letter-spacing: 8px;
-}
-.group-logo .white-logo {
-  color: white;
-}
-
 /* _______________________________HEADER_______________________________*/
 .header-menu {
-  background-color: white;
+  background-color: #FFFFFF;
   min-height: 10%;
   display: flex;
   padding: 3vh;
@@ -100,6 +10,28 @@ section {
   display: none;
 }
 
+@media screen and (min-width: 800px) {
+  /* __________header__________*/
+  .header-menu {
+    padding: 5vh 20vh;
+  }
+  .header-menu nav {
+    width: 30%;
+  }
+  .header-menu nav img {
+    display: none;
+  }
+  .header-menu nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+  .header-menu nav ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
 /* _______________________________INTRODUCTION______________________________*/
 .intoduction-card {
   background-color: #E7816B;
@@ -117,7 +49,7 @@ section {
   align-items: center;
 }
 .intoduction-card p, .intoduction-card h1 {
-  color: white;
+  color: #FFFFFF;
   text-align: center;
   margin: 3vh 0;
 }
@@ -128,6 +60,29 @@ section {
   filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
 }
 
+/* ______________________________________RESPONSIVE______________________________________*/
+@media screen and (min-width: 800px) {
+  /* __________introduction__________*/
+  .intoduction-card {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    min-height: 70vh;
+    padding: 5vh 10vh;
+  }
+  .intoduction-card img {
+    width: 40%;
+  }
+  .intoduction-card div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 5vh;
+  }
+  .intoduction-card div h1, .intoduction-card div p {
+    text-align: left;
+  }
+}
 /* _______________________________LIENS______________________________*/
 .link-section {
   display: flex;
@@ -142,7 +97,7 @@ section {
 }
 .link-section a {
   text-decoration: none;
-  color: white;
+  color: #FFFFFF;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -168,23 +123,38 @@ section {
 }
 .link-section .link-section__web-design-link {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url(./resources/images/image1.png);
+  transition: 0.3s;
 }
 .link-section .link-section__web-design-link:hover {
   background-image: linear-gradient(0deg, rgba(231, 129, 107, 0.63) 0%, rgba(231, 129, 107, 0.63) 100%), url(./resources/images/image1.png);
 }
 .link-section .link-section__app-design-link {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url(./resources/images/image2.png);
+  transition: 0.3s;
 }
 .link-section .link-section__app-design-link:hover {
   background-image: linear-gradient(0deg, rgba(231, 129, 107, 0.63) 0%, rgba(231, 129, 107, 0.63) 100%), url(./resources/images/image2.png);
 }
 .link-section .link-section__graphic-design-link {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url(./resources/images/image3.png);
+  transition: 0.3s;
 }
 .link-section .link-section__graphic-design-link:hover {
   background-image: linear-gradient(0deg, rgba(231, 129, 107, 0.63) 0%, rgba(231, 129, 107, 0.63) 100%), url(./resources/images/image3.png);
 }
 
+/* ______________________________________RESPONSIVE______________________________________*/
+@media screen and (min-width: 800px) {
+  /* __________liens__________*/
+  .link-section .link-section__web-design-link {
+    width: 45%;
+    height: 645px;
+    margin-right: 5%;
+  }
+  .link-section div {
+    width: 50%;
+  }
+}
 /* _______________________________FIGURES______________________________*/
 .section-figure {
   width: 100%;
@@ -217,7 +187,7 @@ section {
 /* _______________________________PROJECT______________________________*/
 .section-your-project {
   background-color: #E7816B;
-  color: white;
+  color: #FFFFFF;
   margin: 5vh;
   border-radius: 16px;
   display: flex;
@@ -227,21 +197,49 @@ section {
   text-align: center;
   padding: 2vh;
   margin-bottom: 0px;
+  position: absolute;
+  top: -30vh;
+  left: auto;
+  right: auto;
+  margin-left: 0;
+  margin-right: 0;
+  width: 78%;
 }
 .section-your-project p, .section-your-project h2 {
   margin: 3vh 0;
 }
 
+/* ______________________________________RESPONSIVE______________________________________*/
+@media screen and (min-width: 800px) {
+  /* __________projet__________*/
+  .section-your-project {
+    top: -30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 10vh;
+  }
+  .section-your-project div {
+    width: 50%;
+  }
+}
 /* _______________________________FOOTER______________________________*/
 footer {
   background-color: #1D1C1E;
   color: #818081;
   padding: 5vh;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  margin-top: 20vh;
+  padding-top: 25vh;
 }
 footer .group-link-menu-laptop {
   display: none;
@@ -260,7 +258,7 @@ footer hr {
 }
 footer a {
   text-decoration: none;
-  color: white;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 footer a:hover {
@@ -277,6 +275,111 @@ footer .list-column li:hover {
 }
 footer ul {
   margin: 3vh 0;
+}
+footer ul li {
+  transition: 0.3s;
+}
+footer ul li:hover {
+  filter: brightness(1.4);
+}
+
+/* ______________________________________RESPONSIVE______________________________________*/
+@media screen and (min-width: 800px) {
+  /* __________footer__________*/
+  footer {
+    padding: 25vh 20vh 10vh 20vh;
+  }
+  footer .footer-menu-and-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  footer .group-logo {
+    justify-self: flex-start;
+  }
+  footer .group-link-menu-phone {
+    display: none;
+  }
+  footer .group-link-menu-laptop {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+  footer .contact-ressources {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: left;
+  }
+  footer .contact-ressources .list-column {
+    width: 20%;
+  }
+}
+/* _______________________________DEFINITIONS GENERAL PARAMETERS_______________________________*/
+body {
+  font-family: "Jost";
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, figcaption {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+p, button {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+section {
+  padding: 5vh;
+}
+
+.primary-btn {
+  margin: 3vh 0;
+  text-transform: uppercase;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 2vh;
+  border: none;
+  z-index: 99;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background-color: #FFAD9B;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.group-logo {
+  display: flex;
+  align-items: center;
+}
+.group-logo p {
+  text-transform: uppercase;
+  margin-left: 2vh;
+  font-size: 24px;
+  letter-spacing: 8px;
+  font-weight: 500;
+}
+.group-logo .white-logo {
+  color: #FFFFFF;
 }
 
 /* ______________________________________RESPONSIVE______________________________________*/
@@ -304,103 +407,6 @@ footer ul {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 2px;
-  }
-
-  /* __________header__________*/
-  .header-menu {
-    padding: 5vh 20vh;
-  }
-  .header-menu nav {
-    width: 30%;
-  }
-  .header-menu nav img {
-    display: none;
-  }
-  .header-menu nav ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    text-transform: uppercase;
-  }
-  .header-menu nav ul li:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  /* __________introduction__________*/
-  .intoduction-card {
-    border-radius: 16px;
-    display: flex;
-    flex-direction: row;
-    min-height: 70vh;
-    padding: 5vh 10vh;
-  }
-  .intoduction-card img {
-    width: 40%;
-  }
-  .intoduction-card div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 5vh;
-  }
-  .intoduction-card div h1, .intoduction-card div p {
-    text-align: left;
-  }
-
-  /* __________liens__________*/
-  .link-section .link-section__web-design-link {
-    width: 45%;
-    height: 645px;
-    margin-right: 5%;
-  }
-  .link-section div {
-    width: 50%;
-  }
-
-  /* __________projet__________*/
-  .section-your-project {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    padding: 10vh;
-  }
-  .section-your-project div {
-    width: 50%;
-  }
-
-  /* __________footer__________*/
-  footer {
-    padding: 10vh 20vh;
-  }
-  footer .footer-menu-and-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  footer .group-logo {
-    justify-self: flex-start;
-  }
-  footer .group-link-menu-phone {
-    display: none;
-  }
-  footer .group-link-menu-laptop {
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-  }
-  footer .contact-ressources {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  footer .contact-ressources .list-column {
-    width: 20%;
   }
 }
 

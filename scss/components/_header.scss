@@ -1,0 +1,35 @@
+@import "../helpers/colors";
+/* _______________________________HEADER_______________________________*/
+.header-menu{
+  background-color:$white;
+  min-height: 10%;
+  display: flex;
+  padding: 3vh;
+  justify-content: space-between;
+  ul{
+    display: none;
+  }
+} 
+
+@media screen and (min-width:800px){
+  /* __________header__________*/
+  .header-menu{
+    padding: 5vh 20vh;
+    nav {
+      width: 30%;
+      img{
+        display: none;
+      }
+      ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        text-transform: uppercase;
+        li:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

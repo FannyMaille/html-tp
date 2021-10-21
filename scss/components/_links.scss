@@ -1,0 +1,77 @@
+@import "../helpers/colors";
+/* _______________________________LIENS______________________________*/
+.link-section{
+  display: flex;
+  align-items: center;
+  margin-top: 5vh;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+  div{
+    width: 100%;
+  }
+
+  a{
+    text-decoration: none;
+    color: $white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5vh;
+    border-radius: 15px;
+    text-transform: uppercase;
+  }
+  a:hover{
+    cursor: pointer;
+  }
+  h2{
+    font-size: 28px;
+    letter-spacing: 1.4px;
+  }
+  p{
+    letter-spacing: 5px;
+  }
+  .link-section__web-design-link{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%), url(./resources/images/image1.png) ;
+    transition: 0.3s;
+  }
+  .link-section__web-design-link:hover{
+    background-image: linear-gradient(0deg, rgba(231,129,107,0.63) 0%, rgba(231,129,107,0.63) 100%), url(./resources/images/image1.png);
+  }
+  .link-section__app-design-link{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%), url(./resources/images/image2.png);
+    transition: 0.3s;
+  }
+  .link-section__app-design-link:hover{
+    background-image: linear-gradient(0deg, rgba(231,129,107,0.63) 0%, rgba(231,129,107,0.63) 100%), url(./resources/images/image2.png);
+  }
+  .link-section__graphic-design-link{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%), url(./resources/images/image3.png);
+    transition: 0.3s;
+  }
+  .link-section__graphic-design-link:hover{
+    background-image: linear-gradient(0deg, rgba(231,129,107,0.63) 0%, rgba(231,129,107,0.63) 100%), url(./resources/images/image3.png);
+  }
+}
+
+/* ______________________________________RESPONSIVE______________________________________*/
+@media screen and (min-width:800px){
+  /* __________liens__________*/
+  .link-section{
+    .link-section__web-design-link{
+      width: 45%;
+      height: 645px;
+      margin-right: 5%;
+    }
+    div {
+      width: 50%;
+    }
+  }
+}
